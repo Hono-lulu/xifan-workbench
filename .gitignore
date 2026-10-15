@@ -1,0 +1,14 @@
+# Node / Electron
+desktop/node_modules/
+desktop/dist/
+desktop/package-lock.json
+
+# Gradle / Android
+android/.gradle/
+android/app/build/
+android/local.properties
+android/build/
+
+# 通用
+*.log
+.DS_Store

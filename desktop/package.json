@@ -1,0 +1,48 @@
+{
+  "name": "xifan-workbench",
+  "productName": "稀饭专属工作台",
+  "version": "1.0.0",
+  "description": "把日子过成喜欢的样子 · 温暖治愈的个人工作台",
+  "main": "main.js",
+  "author": "xifan",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis --publish never"
+  },
+  "build": {
+    "appId": "com.xifan.workbench",
+    "productName": "稀饭专属工作台",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "package.json",
+      "icon.ico"
+    ],
+    "win": {
+      "icon": "icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "稀饭专属工作台"
+    }
+  },
+  "devDependencies": {
+    "electron": "^30.1.0",
+    "electron-builder": "^24.13.3"
+  }
+}
